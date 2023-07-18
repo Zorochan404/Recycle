@@ -1,0 +1,10 @@
+body{
+    margin: 0%;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(198,245,255,1) 0%, rgba(174,232,174,1) 0%, rgba(70,217,61,1) 100%);
+}
+.btn{
+    margin-left: 200px;
+    margin-top: 500px;
+    
+}
