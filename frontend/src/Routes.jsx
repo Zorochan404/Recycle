@@ -6,6 +6,7 @@ import Details from './components/Details'
 import Tasks from './components/Tasks'
 import Garbage from './components/Garbage'
 import Hostel from './components/Hostel';
+import Verify from './components/Verify'
 
 export default function Link() {
   return (
@@ -17,6 +18,7 @@ export default function Link() {
             <Route path='/hostel/:id' element={<Hostel/>}/>
             <Route path='/tasks/:id' element={<Tasks/>}/>
             <Route path='/garbage/:id' element={<Garbage/>}/>
+            <Route path='/verify' element={<Verify/>}/>
             </Routes>
         </Router>
 
