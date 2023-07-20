@@ -7,7 +7,11 @@ import Tasks from './components/Tasks'
 import Garbage from './components/Garbage'
 import Hostel from './components/Hostel';
 import Verify from './components/Verify'
-import Cfpelectricity from './components/Cfpelectricity';
+
+import Water from './components/Water';
+import Leaderboard from './components/Result';
+import HostelDetails from './components/Hdetails';
+import Vehicle from './components/Vehicle';
 
 export default function Link() {
   return (
@@ -20,7 +24,11 @@ export default function Link() {
             <Route path='/tasks/:id' element={<Tasks/>}/>
             <Route path='/garbage/:id' element={<Garbage/>}/>
             <Route path='/verify/:id' element={<Verify/>}/>
-            <Route path='/cfpelectricity' element={<Cfpelectricity/>}/>
+            <Route path='/Water/:id' element={<Water/>}/>
+            <Route path='/result' element={<Leaderboard/>}/>
+            <Route path='/vehicle' element={<Vehicle/>}/>
+            <Route path='/hostels/:id' element={<HostelDetails/>}/>
+           
             </Routes>
         </Router>
 

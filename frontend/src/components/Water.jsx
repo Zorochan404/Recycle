@@ -11,21 +11,23 @@ const VerifyContent = () => {
 
 
 
-    const [electricityBill, setElectricityBill] = useState('');
+    const [waterBill, setWaterBill] = useState('');
   const [databaseContent, setDatabaseContent] = useState('');
   const [similarity, setSimilarity] = useState('');
-  const [electricitycfp, setElectricitycfp] = useState('');
+  const [watercfp, setWatercfp] = useState('');
+  const [waterl, setWaterl] = useState('');
   const Navigate = useNavigate();
 
 
 
-  const calculateElectricityCFP = () => {
-    setElectricitycfp(0.23 * electricityBill);
+  const calculatewaterCFP = () => {
+    setWaterl(66.7* waterBill)
+    setWatercfp(0.3 * waterl);
   };
 
   useEffect(() => {
-    calculateElectricityCFP();
-  }, [electricityBill]);
+    calculatewaterCFP();
+  }, [waterBill]);
 
 
 
@@ -68,7 +70,7 @@ const VerifyContent = () => {
       if (response.data.similarity > 0.5) {
         alert('Document Verified!');
       
-        console.log('Electricity bill:', electricityBill);
+        console.log('water bill:', waterBill);
 
       } else {
         alert('Document not verified.');
@@ -76,9 +78,9 @@ const VerifyContent = () => {
 
 
       const dataToSend = {
-        electricitycfp: electricitycfp
+        watercfp: watercfp
       };
-      const res = await axios.put(`http://localhost:8000/api/electricity/${id}`, dataToSend);
+      const res = await axios.put(`http://localhost:8000/api/water/${id}`, dataToSend);
       if (res.data) {
         alert('Request Submitted');
       } else {
@@ -94,15 +96,15 @@ const VerifyContent = () => {
 
   return (
     <div>
-        <h2>Enter Your Electricity Bill</h2>
+        <h2>Enter Your water Bill</h2>
         <form onSubmit={onDrop}>
       <Container>
         <TextField
           type="number"
-          label="Electricity Bill"
+          label="Water Bill in Rupees"
           placeholder="Bill in Rupees"
           variant="outlined"
-          onChange={(e) => setElectricityBill(e.target.value)}
+          onChange={(e) => setWaterBill(e.target.value)}
           fullWidth
         />
       </Container>
@@ -138,7 +140,7 @@ const VerifyContent = () => {
       </form>
       <div>
         <h2>Carbon Footprint Emitted</h2>
-        <h3>{electricitycfp}KG</h3>
+        <h3>{watercfp}KG</h3>
       </div>
     </div>
  

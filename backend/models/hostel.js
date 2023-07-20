@@ -14,31 +14,35 @@ const hostelSchema = new mongoose.Schema({
 
     },
     wetgarbage:{
-        type:Number,
+        type: Number,
         default:0
     },
     drygarbage:{
-        type:Number,
+        type: Number,
         default:0
     },
     wetgcfp:{
-        type:Number,
+        type: Number,
         default: 0
     },
     drygcfp:{
-        type:Number,
+        type: Number,
         default: 0
     },
     vehiclecfp:{
-        type:Number,
+        type: Number,
         default: 0
     },
     electricitycfp:{
-        type:Number,
+        type: Number,
         default: 0
     },
     watercfp:{
-        type:Number,
+        type: Number,
+        default: 0
+    },
+    cfp:{
+        type: Number,
         default: 0
     }
     

@@ -38,7 +38,7 @@ export default function Tasks() {
         <div className="vehicle">
         <img className='cimg' src={vehicle}/>
         <div className="container">
-        <Button variant='contained' color="grey">Vehicle
+        <Button variant='contained' color="grey" component={Link} to={'/vehicle'}>Vehicle
         </Button>
         </div>
         </div>
@@ -55,7 +55,7 @@ export default function Tasks() {
         <div className="water">
         <img className='cimg' src={water}/>
         <div className="container">
-        <Button variant='contained' color="grey">Water
+        <Button variant='contained' color="grey" component={Link} to={`/water/${id}`}>Water
         </Button>
         </div>
         </div>
