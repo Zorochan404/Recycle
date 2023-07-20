@@ -52,6 +52,7 @@ export default function Hostel() {
         </div>
         <div className='menu'>
         <Box sx={{ minWidth: 400, maxWidth:500  }}>
+          <h2>SELECT YOUR HOSTEL</h2>
         <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Select Hostel</InputLabel>
         <Select

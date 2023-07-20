@@ -1,10 +1,83 @@
 body{
     margin: 0%;
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(198,245,255,1) 0%, rgba(174,232,174,1) 0%, rgba(70,217,61,1) 100%);
+    font-family: 'Roboto', sans-serif;
 }
 .btn{
-    margin-left: 200px;
-    margin-top: 500px;
+    margin-left: 180vh;
     
+}
+.welcomeimg{
+    width: 100vh;
+    height: auto;
+    margin-top: 11vh;
+}
+.welcometext{
+    margin-top: 8vh;
+    width: 60vh;
+}
+.text{
+    margin-top: 5vh;
+    margin-left: 103vh;
+}
+.garbage{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 25vh;
+}
+.vehicle{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 25vh;
+}
+.electricity{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 25vh;
+}
+.water{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 25vh;
+}
+.container{
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 9vh;
+}
+.dryw{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 5vh;
+}
+.wetw{
+    width: 35vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    height: 40vh;
+    margin-top: 5vh;
+}
+.cimg{
+    width: 30vh;
+    height: 30vh;
+    margin:auto;
+}
+.btnesub{
+    margin-top: 5vh;
+    margin-left: 98vh;
 }

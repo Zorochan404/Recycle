@@ -49,6 +49,7 @@ export default function Details() {
       </div>
       <div className='menu'>
         <Box sx={{ maxWidth: 500, minWidth: 400 }}>
+          <h2>SELECT YOUR COLLEGE</h2>
         <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Select college</InputLabel>
         <Select

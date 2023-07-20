@@ -7,6 +7,7 @@ import Tasks from './components/Tasks'
 import Garbage from './components/Garbage'
 import Hostel from './components/Hostel';
 import Verify from './components/Verify'
+import Cfpelectricity from './components/Cfpelectricity';
 
 export default function Link() {
   return (
@@ -18,7 +19,8 @@ export default function Link() {
             <Route path='/hostel/:id' element={<Hostel/>}/>
             <Route path='/tasks/:id' element={<Tasks/>}/>
             <Route path='/garbage/:id' element={<Garbage/>}/>
-            <Route path='/verify' element={<Verify/>}/>
+            <Route path='/verify/:id' element={<Verify/>}/>
+            <Route path='/cfpelectricity' element={<Cfpelectricity/>}/>
             </Routes>
         </Router>
 
