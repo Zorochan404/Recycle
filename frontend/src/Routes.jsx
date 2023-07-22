@@ -12,13 +12,19 @@ import Water from './components/Water';
 import Leaderboard from './components/Result';
 import HostelDetails from './components/Hdetails';
 import Vehicle from './components/Vehicle';
+import Loading from './components/Loading';
+import Login from './components/Login';
+import Forme from './components/Forme';
+import Formw from './components/Formw.jsx';
 
 export default function Link() {
   return (
     <div>
         <Router>
             <Routes>
-            <Route path='/' element={<Welcome/>}/>
+            <Route path='/' element={<Loading/>}/>
+            <Route path='/login/:id' element={<Login/>}/>
+            <Route path='/home' element={<Welcome/>}/>
             <Route path='/details' element={<Details/>}/>
             <Route path='/hostel/:id' element={<Hostel/>}/>
             <Route path='/tasks/:id' element={<Tasks/>}/>
@@ -28,6 +34,8 @@ export default function Link() {
             <Route path='/result' element={<Leaderboard/>}/>
             <Route path='/vehicle' element={<Vehicle/>}/>
             <Route path='/hostels/:id' element={<HostelDetails/>}/>
+            <Route path='/forme/:id' element={<Forme/>}/>
+            <Route path='/formw/:id' element={<Formw/>}/>
            
             </Routes>
         </Router>

@@ -15,12 +15,14 @@ const VerifyContent = () => {
   const [databaseContent, setDatabaseContent] = useState('');
   const [similarity, setSimilarity] = useState('');
   const [electricitycfp, setElectricitycfp] = useState('');
+  const [cfpl, setCfpl] = useState('');
   const Navigate = useNavigate();
 
 
 
   const calculateElectricityCFP = () => {
     setElectricitycfp(0.23 * electricityBill);
+    setCfpl(0.207 * electricityBill)
   };
 
   useEffect(() => {
@@ -87,7 +89,7 @@ const VerifyContent = () => {
     } catch (error) {
       alert('Error verifying image.');
     }
-    Navigate(`/tasks/${id}`)
+    Navigate(`/forme/${id}`)
   };
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
@@ -139,6 +141,10 @@ const VerifyContent = () => {
       <div>
         <h2>Carbon Footprint Emitted</h2>
         <h3>{electricitycfp}KG</h3>
+        <h3>Your target for the month: {cfpl}KG</h3>
+        <h2>Tips to reduce Carbon Footprint</h2>
+        <h3>1. For 10 hour reduced usage of fan can reduce 1KG CO2</h3>
+        <h3>2. For 10 hour reduced in charging can reduce 1KG CO2</h3>
       </div>
     </div>
  

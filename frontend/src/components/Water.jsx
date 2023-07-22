@@ -16,13 +16,30 @@ const VerifyContent = () => {
   const [similarity, setSimilarity] = useState('');
   const [watercfp, setWatercfp] = useState('');
   const [waterl, setWaterl] = useState('');
+  const [cfpll, setCfpll] = useState('');
+  const [alertt, setAlertt] = useState('');
   const Navigate = useNavigate();
 
 
 
+
+  
+  const target =()=>{
+    if (cfpll<= 19.58) {
+      setAlertt('You have acheived your goal')
+    } else {
+      setAlertt('You have acheived your goal')
+    }
+  }
+
+  useEffect(() => {
+    target();
+  }, [cfpll]);
+
   const calculatewaterCFP = () => {
-    setWaterl(66.7* waterBill)
-    setWatercfp(0.3 * waterl);
+    setWaterl(125* waterBill)
+    setWatercfp(0.037 * waterBill);
+    setCfpll(0.03* waterBill)
   };
 
   useEffect(() => {
@@ -83,13 +100,14 @@ const VerifyContent = () => {
       const res = await axios.put(`http://localhost:8000/api/water/${id}`, dataToSend);
       if (res.data) {
         alert('Request Submitted');
+        alert(alertt)
       } else {
         alert('Request Failed');
       }
     } catch (error) {
       alert('Error verifying image.');
     }
-    Navigate(`/tasks/${id}`)
+    Navigate(`/formw/${id}`)
   };
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
@@ -141,6 +159,8 @@ const VerifyContent = () => {
       <div>
         <h2>Carbon Footprint Emitted</h2>
         <h3>{watercfp}KG</h3>
+        <h3>Your target for the month: {cfpll}KG</h3>
+        <h3>Your last month carbon emission target was: 19.68KG </h3>
       </div>
     </div>
  

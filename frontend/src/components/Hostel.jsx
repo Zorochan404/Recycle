@@ -68,7 +68,7 @@ export default function Hostel() {
             const {_id, name} = hostels
           return(
 
-            <MenuItem key ={_id} value={_id } component={Link} to={`/tasks/${_id}`}>{name}</MenuItem>
+            <MenuItem key ={_id} value={_id } component={Link} to={`/login/${_id}`}>{name}</MenuItem>
           )})}
          
         </Select>
